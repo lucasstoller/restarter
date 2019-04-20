@@ -1,6 +1,6 @@
 {
   "name": "restarter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A javascript tool to fast reset your station",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "restarter": "./cli.js"
   },
   "dependencies": {
-    "commander": "^2.20.0"
+    "commander": "^2.20.0",
+    "shelljs": "^0.8.3"
   }
 }
