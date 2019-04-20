@@ -11,5 +11,8 @@
     "js"
   ],
   "author": "Lucas Stoller",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "bin": {
+    "restarter": "./cli.js"
+  }
 }
