@@ -1,0 +1,15 @@
+{
+  "name": "restarter",
+  "version": "1.0.0",
+  "description": "A javascript tool to fast reset your station",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "restarter",
+    "js"
+  ],
+  "author": "Lucas Stoller",
+  "license": "Apache-2.0"
+}
