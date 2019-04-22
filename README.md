@@ -1,5 +1,5 @@
 # RESTARTER JS
-## A Multiplataform javascript tool to fast reset your station
+## A Cross plataform javascript tool to fast reset your station
 ![Dr. Strange](https://i.ytimg.com/vi/OYEfs8hUUu4/maxresdefault.jpg)
 ### Requirements:
 * Windows
@@ -11,6 +11,8 @@
 
 ### Usage
 * Clone this repo
+* Inside the repo:
+* Run `npm install` inside the repo to install dependencies
 * Run `npm link` inside the repo to create a symlink
 * Run `restarter <option>` and be happy
 

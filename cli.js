@@ -25,7 +25,7 @@ if (process.argv.length == 2) {
                  --/osooo++oso/--                 
                       .    .
 
-                   RESTARTER JS 👁
+                   RESTARTER JS 👁 v0.1.0
                       `);
 } else {
   if (program.up) up(program.up);
