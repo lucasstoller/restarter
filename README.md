@@ -1,5 +1,5 @@
 # RESTARTER JS
-## A Multiplataform javascript tool to fast reset your station
+## A Cross plataform javascript tool to fast reset your station
 ![Dr. Strange](https://i.ytimg.com/vi/OYEfs8hUUu4/maxresdefault.jpg)
 ### Requirements:
 * Windows
