@@ -38,13 +38,17 @@ function install(programs, os){
   if (programs.length == 0) return;
   if (programs.length >= 1){
     program = programs.shift();
+    shell.echo(`Preparing to install ${program.name.toUpperCase()}`);    
+    
     const manager = os.command
-    const command = shell.exec(`${manager} install ${program.name} --yes`, {silent: true})
+
+    shell.echo(`Running: "${manager} install ${program.name}"...`);
+    const command = shell.exec(`sudo ${manager} install ${program.name} --yes`, {silent: true});
     
     if (command.code !== 0) {
-      shell.echo(`✖ ️Error: ${program.name} could not be istalled.`);
+      shell.echo(`✖ ️Error: ${program.name} could not be istalled.\n`);
     } else {
-      shell.echo(`✔️ ️${program.name} installed.`);
+      shell.echo(`✔️ ️${program.name} installed.\n`);
     }
 
     install(programs, os);
@@ -60,7 +64,7 @@ module.exports = path => {
   const setup = JSON.parse(rawdata);
   if (setup.type != "__restarter") return console.log('\nError! Not a restarter file.\n');
   
-  console.log(`Setuping ${path} station...`);
+  shell.echo(`Setuping ${path} station\n`);
 
   switch (OS) {
     case 'win32':
@@ -84,4 +88,6 @@ module.exports = path => {
       }
       break;
   }
+
+  shell.echo("All done")
 }
