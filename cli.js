@@ -10,6 +10,11 @@ program
   .description('Installs all the programs and plugins in <setup> file')
   .action(setup => up(setup));
 
+<<<<<<< Updated upstream
+=======
+program.command('new-setup', 'Creates a empty setup file')
+
+>>>>>>> Stashed changes
 program.on('--help', function() {
   console.log(
 `                     . .. .                      
