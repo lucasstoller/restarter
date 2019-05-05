@@ -19,6 +19,12 @@
 ### Options
 * `up <setup>`:
   - Install all programs represented inside `<setup>` file.
+* `new-setup`:
+  - Create a blank `<setup>` file in the current directory.
+  - Options:
+    - `-s, --setup-name <name>`  Create a setup file with a custom name.
+    - `-p, --path <path>`        Create a setup file in a specific directory
+
 
 #### Setup File
 * Your setup image file. It's a JSON (.json) file that constains all your programs described.

@@ -1,15 +1,20 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-var up      = require('./app/up');
+var up = require('./app/up');
+
+program.version('0.1.0')
 
 program
-  .version('1.0.0', '-v, --version')
-  .option('up <setup>', 'Installs all the programs and plugins in <setup> file')
-  .parse(process.argv);
+  .command('up <setup>')
+  .description('Installs all the programs and plugins in <setup> file')
+  .action(setup => up(setup));
 
-if (process.argv.length == 2) {
-  console.log(`                     . .. .                      
+program.command('new-setup', 'Creates a empty setup file')
+
+program.on('--help', function() {
+  console.log(
+`                     . .. .                      
                  ::/oysssssyyo/::                 
              -+/+sho:.   hy .:+ys+/+-             
            /os/yy+s+    .h/     -syoys/           
@@ -25,8 +30,9 @@ if (process.argv.length == 2) {
                  --/osooo++oso/--                 
                       .    .
 
-                   RESTARTER JS 👁 v0.1.0
-                      `);
-} else {
-  if (program.up) up(program.up);
-}
+                RESTARTER JS 👁 v${program.version()}
+`
+  );
+})
+
+program.parse(process.argv);

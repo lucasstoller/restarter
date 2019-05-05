@@ -1,0 +1,6 @@
+{
+  "type": "__restarter",
+  "programs": [
+    {"name": "your-app-name"}
+  ]
+}
